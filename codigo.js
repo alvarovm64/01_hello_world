@@ -103,6 +103,7 @@ btn1.addEventListener("click", function(){
     unProfe.nombre = Nombre.value;
     unProfe.apellidos = Apellidos.value;
     unProfe.telefono = Telefono.value;
+    unProfe.asignaturas = [];
     datos.push(unProfe);
 });
 
@@ -112,6 +113,24 @@ btn2.addEventListener("click", function(){
         console.log(`${i.dni} ${i.nombre} ${i.apellidos} ${i.telefono}`);
         for(let j of i.asignaturas)
             console.log(`    ${j.codigo} ${j.nombre}`);
+    }
+});
+
+//evento que añade asignatura
+var DNI2 = document.getElementById(DNI2);
+var codA = document.getElementById(codA);
+var nombreA = document.getElementById(nombreA);
+var btn3 = document.getElementById(boton3);
+var btn4 = document.getElementById(boton4);
+
+btn3.addEventListener("click", function(){
+    for(let i of datos){
+        if(i.dni == DNI2.value){
+            var unaAsignatura;
+            unaAsignatura.codigo = codA.value;
+            unaAsignatura.nombre = nombreA.value;
+            i.asignaturas.push(asignaturas);
+        }
     }
 });
 
