@@ -110,6 +110,8 @@ btn1.addEventListener("click", function(){
 btn2.addEventListener("click", function(){
     for(let i of datos){
         console.log(`${i.dni} ${i.nombre} ${i.apellidos} ${i.telefono}`);
+        for(let j of i.asignaturas)
+            console.log(`    ${j.codigo} ${j.nombre}`);
     }
 });
 
