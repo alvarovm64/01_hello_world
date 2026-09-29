@@ -96,9 +96,14 @@ var Telefono = document.getElementById("Telefono");
 var btn1 = document.getElementById("boton1");
 var btn2 = document.getElementById("boton2");
 
-//Capturando eventos
+//Capturar evento de btn1
 btn1.addEventListener("click", function(){
-    console.log(texto1.value);
+    var unProfe = {};
+    unProfe.dni = DNI.value;
+    unProfe.nombre = Nombre.value;
+    unProfe.apellidos = Apellidos.value;
+    unProfe.telefono = Telefono.value;
+    datos.push(unProfe);
 });
 
 /*
