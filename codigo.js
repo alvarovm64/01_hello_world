@@ -106,6 +106,13 @@ btn1.addEventListener("click", function(){
     datos.push(unProfe);
 });
 
+//evento btn2
+btn2.addEventListener("click", function(){
+    for(let i of datos){
+        console.log(`${i.dni} ${i.nombre} ${i.apellidos} ${i.telefono}`);
+    }
+});
+
 /*
 Crear un formulario para dar de alta profesores introduciendo el DNI nombre apellidos y teléfono
 del mismo
